@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    /* 实现水平垂直居中 方式：
+    1、弹性盒布局 父display:flex; justy-content:center;aligin-items:cneter
+    2、网格布局 父：display: grid; justify-content: center;align-items: center; 
+    3、使用定位父：position：relative
+       子：position:absolute;top50%;left:50;margin-left、top：自身盒子宽高一半
+            或者transform:translate(-50% -50%);
+            或：left、top、right、bottom均为0；margin：auto
+    4、父:display: table-cell;
+       子：display:inline-block;*/
+    justify-content: center;
+    align-items: center;
+    /* vh和%的区别
+     vh：根据浏览器视口的高度变化
+     %：根据父盒子或者根元素的宽高，等比变化
+     */
+    height: 100vh;
+}
+.container{
+    display: flex;
+    width: 90vw;
+}
+/* panel:面板的意思
+flex:flex-grow(默认0) flex-shink(默认1) flex-basis(默认auto) */
+.panel{
+    position: relative;
+    flex: 0.5;
+    height: 80vh;
+    margin: 10px;
+    border-radius: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* 
+    1、length: 宽度px 高度px
+    2、百分比：相对于背景定位区域的百分比
+    3、cover：保持纵横比，完全覆盖背景的最小大小
+    4、contain：保持纵横比，适合背景定位区域的最大大小
+    */
+    background-size: cover;
+    transition: all 0.7s ease-in;
+}
+.panel h3{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #fff;
+    opacity: 0;
+}
+.active{
+    flex: 5;
+}
+.active h3{
+    opacity: 1;
+    /* 要变化的属性名，过度变化时长，转速曲线，定义transition效果开始的时候 */
+    transition: opacity 0.3s ease-in 0.4s;
+}
+@media (max-width:480px) {
+   .container{
+    width: 100%;
+   }
+    .panel:nth-of-type(4),.panel:nth-of-type(5){
+        display: none;
+    }
+}
+    
+
+
+

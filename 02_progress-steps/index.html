@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>progress-steps</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <!-- 
+        1、巧妙利用::before 和 z-index，两个进度条显示
+        2、button 的 disabled 属性；点击时 .btn:active{transform：scale(0.98)}
+        3、写代码时需要动态计算 progress的 width，而不是用33.33%古板数据
+        4、共同用到的地方抽取出来成一个方法 update
+     -->
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress"></div>
+            <div class="circle active">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+        </div>
+        <button class="btn" id="prev" disabled>prev</button>
+        <button class="btn" id="next">next</button>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+/* :root 是一个伪类，表示文档根元素，在:root中声明相当于全局属性，
+只要当前页面引用了root,都可以使用var()来引用
+ */
+:root{
+    --line-fill-color: #3498dd;
+    --line-empty-color: #e0e0e0;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #f6f7fb;
+}
+.container{
+    text-align: center;
+}
+.progress-container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    margin-bottom: 30px;
+}
+.progress-container::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 4px;
+    background: var(--line-empty-color);
+}
+.progress{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    transform: translateY(-50%);
+    width: 0px;
+    height: 4px;
+    background:var(--line-fill-color);
+    transition: 0.4s ease;
+}
+.circle{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: #fff;
+    border: 3px solid var(--line-empty-color);
+    border-radius: 50%;
+    color: #999;
+    transition: 0.4s ease;
+}
+.active{
+    border: 3px solid var(--line-fill-color);
+}
+.btn{
+    padding: 8px 30px;
+    margin: 5px;
+    background: var(--line-fill-color);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+}
+.btn:disabled{
+    cursor: not-allowed;
+    background:var(--line-empty-color);
+}
