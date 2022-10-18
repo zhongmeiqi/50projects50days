@@ -7,15 +7,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
+        <!-- web子资源完整性：https://github.com/dreamapplehappy/blog/tree/master/2021/09/20 -->
     <link rel="stylesheet" href="style.css" />
     <title>Rotating Navigation</title>
 </head>
 
 <body>
+    <!-- 
+        1、circle-container放圆圈，圆圈里面动
+     -->
     <div class="container">
-        <div class="circle">
-            <button id="close"><i class="fas fa-times"></i></button>
-            <button id="open"><i class="fas fa-bars"></i></button>
+        <div class="circle-container">
+            <div class="circle">
+                <button id="close"><i class="fas fa-times"></i></button>
+                <button id="open"><i class="fas fa-bars"></i></button>
+            </div>
         </div>
         <article>
             <h3>Amazing Article</h3>

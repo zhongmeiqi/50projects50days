@@ -1,17 +1,32 @@
 *{
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     box-sizing: border-box;
 }
 body{
     background: #333;
+    background-color: #333;
+    color: #222;
+    overflow-x: hidden;
+    margin: 0;
 }
 .container{
     width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
     background: #fff;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
 }
 
+.container.show-nav{
+    transform: rotate(-20deg);
+}
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+  }
 .circle{
     position: fixed;
     top:-100px;
@@ -22,13 +37,10 @@ body{
     background: #ff7979;
     transition: transform 0.5s linear;
 }
-.show-nav .circle{
-    transform: rotate(-90deg);
-}
-.show-nav{
-    transform-origin: left top;
-    transform: rotate(-20deg);
-}
+.container.show-nav .circle {
+    transform: rotate(-70deg);
+  }
+
 .circle button{
     position: absolute;
     top: 65%;
@@ -56,19 +68,20 @@ img{
 }
 /* 选择所有紧跟在 show-nav 元素之后的第一个 nav 元素 */
 .container.show-nav+nav li{
-    transform: translateX((0));
+    transform: translateX(0);
     transition-delay: 0.3s;
 }
 nav{
     position: fixed;
     bottom: 40px;
-    left: 0;
+    left: 50px;
     z-index: 100;
 }
 nav ul li{
     text-transform: uppercase;
     color: #fff;
     margin: 40px 0;
+    list-style: none;
     transform: translateX(-100%);
     transition: transform 0.4s ease-in;
 }
