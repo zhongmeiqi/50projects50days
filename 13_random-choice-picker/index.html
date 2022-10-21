@@ -9,6 +9,12 @@
 </head>
 
 <body>
+  <!-- 
+    判断是不是enter键 ：keyup,e.key==='Enter',延迟清空数据e.target.value=''
+    生成tags时记得先清掉原先的tag tags.innerHTML = ''
+    定时器的运用，随机生成 Math.floor(Math.random()*tagList.length)
+    当选中后，隔200ms要去掉选中状态，最后到5000时再去掉定时器，并且选中
+   -->
   <div class="container">
     <h3>Enter all of the choices divided by a comma (','). <br> Press enter when you're done</h3>
     <textarea placeholder="Enter choices here..." id="textarea"></textarea>

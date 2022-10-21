@@ -5,10 +5,10 @@
 body{
     display: flex;
     /* 实现水平垂直居中 方式：
-    1、弹性盒布局 父display:flex; justy-content:center;aligin-items:cneter
+    1、弹性盒布局 父display:flex; justy-content:center;aligin-items:center
     2、网格布局 父：display: grid; justify-content: center;align-items: center; 
     3、使用定位父：position：relative
-       子：position:absolute;top50%;left:50;margin-left、top：自身盒子宽高一半
+       子：position:absolute;top50%;left:50%;margin-left、top：自身盒子宽高一半
             或者transform:translate(-50% -50%);
             或：left、top、right、bottom均为0；margin：auto
     4、父:display: table-cell;

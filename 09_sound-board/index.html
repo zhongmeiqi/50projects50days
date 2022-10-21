@@ -9,6 +9,13 @@
 </head>
 
 <body>
+  <!-- 如果audio没有设置controls,默认是display:none!important;
+        audio:not([controls]){display:none!important}
+
+        暂停播放：audio.pause()
+        重新播放：audio.currentTIme=0
+        开始播放：audio.play()
+  -->
   <audio id="applause" src="sounds/applause.mp3"></audio>
   <audio id="boo" src="sounds/boo.mp3"></audio>
   <audio id="gasp" src="sounds/gasp.mp3"></audio>

@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #e1e1e1;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.container{
+    width: 500px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 16px;
+}

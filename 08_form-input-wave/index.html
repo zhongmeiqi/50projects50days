@@ -10,6 +10,26 @@
 </head>
 
 <body>
+    <!-- 
+        innerHTML
+        transition-delay:${idx*50ms}
+        background:transparent
+        border-bottom-color
+        transform:scale(0.98)
+
+        pointer-events属性：用于控制在什么条件下该元素可以成为指针事件的目标，
+        none:该元素永远不会成为鼠标事件的target
+        auto:默认值表示指针事件已启用；此时原属会响应指针事件，阻止这些事件在其下面的元素上出发
+        inherit:将使用pointer-events元素的父级的值
+
+        使用场景：
+        1、屏蔽鼠标事件 阻止事件向上冒泡
+        2、事件穿透 比如设置蒙层，正常是无法触发蒙层下面的元素事件，若想继续触发底层文字以及指针事件，
+        可以对蒙层使用pointer-events:none属性，指针事件会穿透蒙层直接触发底层元素
+
+        transition:0.3s cubic-bezier(0.69,-0.55,0.265,1.55)
+       
+     -->
     <div class="container">
         <h1>Please Login</h1>
         <form>
