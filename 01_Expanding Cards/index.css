@@ -9,7 +9,7 @@ body{
     2、网格布局 父：display: grid; justify-content: center;align-items: center; 
     3、使用定位父：position：relative
        子：position:absolute;top50%;left:50%;margin-left、top：自身盒子宽高一半
-            或者transform:translate(-50% -50%);
+            或者transform:translate(-50%,-50%);
             或：left、top、right、bottom均为0；margin：auto
     4、父:display: table-cell;
        子：display:inline-block;*/

@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --light:#fff;
+    --dark:#000;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background: var(--light);
+    transition: 0.5s ease;
+}
+button{
+    cursor: pointer;
+    background-color: var(--light);
+    color: var(--dark);
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    border: 1px solid var(--dark);
+}
+.dark{
+    background: var(--dark);
+}
+.clock{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    transform:translate(-50%,-50%);
+    background: pink;
+    
+}
+.hour,.minute,.second{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 3px;
+    transform-origin: 0 0;
+}
+.hour{
+    width: 60px;
+    height: 3px;
+    background: var(--dark);
+}
+.minute{
+    width: 120px;
+    height: 3px;
+    background: var(--dark);
+}
+.second{
+    width: 120px;
+    height: 3px;
+    background: red;
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 10px;
+    height: 10px;
+    z-index: 1;
+    background: var(--dark);
+    border-radius: 50%;
+    border: 2px solid red;
+}
+.time{
+    font-size: 48px;
+}
+.date{
+    color: blanchedalmond;
+}
+.day{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: var(--light);
+    background-color: var(--dark);
+}
+
