@@ -1,0 +1,34 @@
+body{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.fa-heart{
+    color: red;
+}
+.loveMe{
+    position: relative;
+    margin-top: 24px;
+    width: 300px;
+    height: 450px;
+    box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+    background-size: contain;
+    background-image: url('./car.avif');
+}
+
+.like{
+    color: red;
+    position: absolute;
+    z-index: -1;
+    transform: scale(1);
+    opacity: 1;
+    font-size: 28px;
+    transition: all 1s linear;
+}
+.like-visible{
+    z-index: 1;
+    transform: scale(5);
+    opacity: 0;
+}
+

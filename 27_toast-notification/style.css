@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: skyblue;
+}
+#toasts{
+    position: absolute;
+    bottom: 0;
+    right: 12px;
+}
+#toasts>div{
+    margin-bottom: 12px;
+    border:24px solid #fff;
+    border-radius: 10px;
+    background: #fff;
+
+}
+button{
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #fff;
+    padding:  24px;
+}
+div[id='one']{
+    color: red;
+}
+div[id='two']{
+    color: green;
+}
+div[id='three']{
+    color: purple;
+}
+div[id='four']{
+    color: aqua;
+}
