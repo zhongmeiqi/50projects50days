@@ -9,6 +9,23 @@
 </head>
 
 <body>
+    <!-- 
+        动画：开启动画会启动GPU进程
+        transform:translate(-50%,-50%) scale(0)
+        animation:0.5s ease-out scale
+
+        @keyframes scale{
+            to{
+                opacity:0;
+                transform:translate(-50%,-50%) scale(3)
+            }
+        }
+
+        e.clientX、e.clientY:鼠标点击处到浏览器窗口的横纵距离
+        e.target.offsetTop、e.target.offsetLeft:该元素距离父元素上、左的宽度
+        所以具体的 left和top = e.clientX - e.target.offsetLeft
+
+     -->
     <button class="ripple">
         click me
     </button>

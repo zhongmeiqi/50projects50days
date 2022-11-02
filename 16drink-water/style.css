@@ -63,7 +63,7 @@ ul li{
 }
 ul li p{    
     width: 30px;
-    /* word-wrap: break-word设置自动换行 */
+    
     word-wrap: break-word;
 }
 

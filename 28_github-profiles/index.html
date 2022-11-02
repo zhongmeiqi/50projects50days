@@ -9,6 +9,18 @@
 </head>
 
 <body>
+    <!-- form.addEventListener('submit' ...)
+        submit事件会在 input 回车时触发
+    async getUser(){
+         try{
+            await axios(APIURL + userName)直接请求
+        }catch(err){
+            有时response不一定有status状态
+            err.reponse.status===404
+        }
+    }
+       
+     -->
     <form class="user-form" id="form">
         <input type="text" id="search" placeholder="Search a Github User">
     </form>

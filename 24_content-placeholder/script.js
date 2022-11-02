@@ -16,6 +16,7 @@ setTimeout(()=>{
     image.style.backgroundImage='url(./img.avif)'
     title.innerText = 'Lorem ipsum dolor sit amet'
     describe.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore perferendis'
+    describe.style.height='32px'
     avatar.style.backgroundImage='url(./author.jpg)'
     authorName.innerText = 'John Doe'
     time.innerText = 'Oct 08, 2020'

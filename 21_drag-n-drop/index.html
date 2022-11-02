@@ -9,6 +9,25 @@
 </head>
 
 <body>
+    <!-- 
+        draggable:可拉的，可拖拽的 ，枚举类型，必须显式指定 true\flase
+        1、draggable="true" 表示元素可以被拖动，"false":不可以被拖动，
+        默认值是auto，表示使用浏览器定义的默认行为
+
+        默认情况，只有选中的文本、图片、链接可以拖动，对其他的元素来说，必须按拖动机制的顺序设置
+        2、ondragstart事件才能正常工作
+
+        如果想要允许放置，必须在 dragenter 和 dragover事件来阻止默认的处理 e.preventDefault();或者 return false
+        即：在dragenter 和 dragover事件中调用preventDefault()方法将表明在该位置允许放置
+
+        dragEnter事件中可以插入一个元素或者增加类名，表示被拖拽的元素移动到了新位置
+        dragover事件在鼠标悬浮的元素上触发
+        dragleave事件在拖拽离开元素时在该元素上触发，是移除插入标记或高亮的好时机
+        drop:执行放置
+        dragend，一旦拖拽完成,dragend事件在拖拽源头（即触发dragstart的元素）上发生，无论拖拽是成功还是被取消，这个事件都会被触发
+
+     -->
+
     <div class="empty">
         <div class="fill" draggable="true"></div>
     </div>
@@ -16,6 +35,10 @@
     <div class="empty"></div>
     <div class="empty"></div>
     <div class="empty"></div>
+
+    <p draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+        This text <strong>may</strong> be dragged.
+    </p>
     <script src="script.js"></script>
 </body>
 

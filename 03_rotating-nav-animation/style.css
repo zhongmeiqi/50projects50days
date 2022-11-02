@@ -90,6 +90,8 @@ nav ul li i{
     font-size: 20px;
     margin-right: 10px;
 }
+/* +相邻兄弟选择器 
+    选择紧挨着的下一个兄弟元素 */
 nav ul li+li{
     margin-left: 15px;
     transform: translateX(-150%);

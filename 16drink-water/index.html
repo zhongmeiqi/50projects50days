@@ -9,6 +9,33 @@
 </head>
 
 <body>
+    <!-- 
+        Grid布局 和 Flex布局相似，但是flex是轴线布局（一维布局），
+        Grid是将容器划分成“行”和“列”，可以看作是二维布局
+
+
+        display:grid
+        grid-template-columns 规定网格布局中的列数和宽度
+        比如 grid-template-columns:auto auto auto auto 是制作四列网格容器
+        repeat:接受2个参数，第一个参数是重复的次数，第二个参数是所要重复的值（百分比或者px）
+
+        有时单元格大小是固定的，但是容器的大小不确定，如果希望每一行（列）尽可能容纳更多的单元格
+        可以使用 auto-fill表示自动填充
+        repeat(auto-fill,100px):每列100px 然后自动填充，知道容器不能防止更多的列
+
+        fr关键字：fraction（片段）表示比例关系
+        grid-template-columns:1fr 2fr; 两列宽度是1fr和2fr,表示后者是前者的2倍
+        grid-template-columns:1fr 1fr; 表示两个相同宽度的列
+        fr 也可以和绝对长度单位结合使用
+        grid-template-columns:150px 1fr 2fr;表示第一列宽度为150px,第二列宽度是第三列的一半
+
+        grid-template-columns:70% 30%; 左栏是70%，右栏是20%
+
+        grid-template-columns:repeat(12,1fr)传统的12网格布局
+
+
+        https://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html
+     -->
     <div class="container">
         <h1>Drink Water</h1>
         <h6>Goal:2Liters</h6>
