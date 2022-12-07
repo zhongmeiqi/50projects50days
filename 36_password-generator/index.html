@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36_password-generator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="container">
+        <h6>password-generator</h6>
+        <div class="result-container">
+            <div id="result"></div>
+            <button id="copy">复制</button>
+        </div>
+        <div class="choose">
+            <label>password length</label> <input type="number" max="20" value="20" id="length">
+        </div>
+        <div class="choose">
+            <label>Include uppercase letters</label> <input type="checkbox" id="uppercase" checked>
+        </div>
+        <div class="choose">
+            <label>Include lowercase letters</label> <input type="checkbox" id="lowercase" checked>
+        </div>
+        <div class="choose">
+            <label>Include numbers</label> <input type="checkbox" id="numbers" checked>
+        </div>
+        <div class="choose">
+            <label>Include symbols</label> <input type="checkbox" id="symbols" checked>
+        </div>
+        <button id="generator">generator password</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

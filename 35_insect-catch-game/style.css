@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    background: #ccc;
+    width: 100vw;
+    height: 100vh;
+}
+#container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+
+.start,.choose{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start div,.choose div{
+    text-align: center;
+}
+.start h1,.choose h6{
+    color: pink;
+    font-size: 48px;
+    margin-bottom: 24px;
+}
+.start button{
+    border: 0;
+    background-color: skyblue;
+    color: #516dff;
+    padding: 15px 20px;
+    font-family: inherit;
+    cursor: pointer; 
+}
+
+.color-list {
+    display: flex;
+    justify-content: space-around;
+}
+.color{
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s;
+}
+.color:hover{
+    box-shadow: 0 0 10px #666;
+}
+.game,.success{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 24px;
+}
+.success{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   color: pink;
+}
+
+

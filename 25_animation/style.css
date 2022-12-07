@@ -20,19 +20,30 @@ body{
 }
 .circle:nth-of-type(1){
     transform: rotate(0deg);
-    animation: rotate 3s infinite;
+    animation: rotate1 linear 3s infinite ;
+    transition:all ;
 }
 .circle:nth-of-type(2){
-    transform: rotate(120deg);
-    animation: rotate 3s infinite 1s;
+    transform: rotate(0deg);
+    animation: rotate1 3s linear infinite 1s;
 
 }
 .circle:nth-of-type(3){
-    transform: rotate(240deg);
-    animation: rotate 3s infinite 2s;
+    transform: rotate(0deg);
+    animation: rotate1 3s linear infinite 2s;
 }
-@keyframes rotate{
+@keyframes rotate1{
     to{
         transform: rotate(360deg);
+    }
+}
+@keyframes rotate2{
+    to{
+        transform: rotate(480deg);
+    }
+}
+@keyframes rotate3{
+    to{
+        transform: rotate(600deg);
     }
 }

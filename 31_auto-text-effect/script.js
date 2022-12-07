@@ -1,20 +1,16 @@
 const textEl = document.querySelector('.text')
 const speedEl = document.querySelector('#speed')
 const text = '能吃能睡，没心没肺'
-let speed=1
+let idx =1
+let speed = 300/speedEl.value
 
-window.onload() = outPutText()
-
-outPutText(){
-    let textArr = text.split('')
-    let tempArr = []
-    let showText = ''
-    setInterval(()=>{
-        showText=
-    },1000/speed)
+writeText()
+function writeText(){
+    textEl.innerText = text.slice(0,idx)
+    idx++
+    if(idx===text.length){
+        idx=1
+    }
+    setTimeout(writeText,speed)
 }
-
-speed.addEventListener('click',(e)=>{
-    speed = e.target.value
-  
-})
+speedEl.addEventListener('input',(e)=>{speed = 300/e.target.value})

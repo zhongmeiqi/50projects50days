@@ -10,3 +10,6 @@ function removeActiveClass(){
         panel.classList.remove('active')
     })
 }
+function sleep(){
+    return new Promise((reslove)=>reslove(false))
+}

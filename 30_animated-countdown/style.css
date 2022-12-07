@@ -1,78 +1,29 @@
 *{
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
 }
 body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
+    margin: 0;
     height: 100vh;
-    background: #e0e0e0;
-}
-.counter{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 150px;
-    height: 50px;
     overflow: hidden;
 }
-.count{
-    position: absolute;
+
+h4{
+    font-size: 20px;
+    margin: 5px;
+    text-transform: uppercase;
+}
+.counter,.final{
+    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%) rotate(120deg);
-    transform-origin: bottom center;
-    font-size: 60px;
-    color: skyblue;
+    text-align: center;
 }
-.counter .in{
-    animation: goIn  0.5s ease-in-out;
+.counter{
+    transform: translate(-50%,-50%);
 }
-.counter .out{
-    animation: goOut 0.5s ease-in-out;
-}
-@keyframes goIn{
-    0%{
-        transform: translate(-50%,-50%) rotate(120deg);
-    }
-    50%{
-        transform: translate(-50%,-50%) rotate(0deg);
-    }
-    70%{
-        transform: translate(-50%,-50%) rotate(-10deg);
-    }
-    80%{
-        transform: translate(-50%,-50%) rotate(20deg);
-    }
-    100%{
-        transform: translate(-50%,-50%) rotate(0deg);
-    }
-}
-@keyframes goOut{
-    0%{
-        transform: translate(-50%,-50%) rotate(0deg);
-    }
-    10%{
-        transform: translate(-50%,-50%) rotate(20deg);
-    }
-    100%{
-        transform: translate(-50%,-50%) rotate(-120deg);
-    }
-}
-@keyframes show{
-    0%{
-        transform: scale(0);
-    }
-    70%{
-        transform: scale(1.4);
-    }
-    100%{
-        transform: scale(1);
-    }
+.counter.hide{
+    transform: translate(-50%,-50%) scale(0);
+    animation: hide 0.2s ease-out;
 }
 @keyframes hide{
     0%{
@@ -82,44 +33,93 @@ body{
         transform: translate(-50%,-50%) scale(0);
     }
 }
-.container.hide{
-    transform: translate(-50%,-50%) scale(1);
-    animation: hide 0.2s linear;
+.final{
+    transform: translate(-50%,-50%) scale(0);
 }
 .final.show{
-   transform: translate(-50%, -50%) scale(1);
-    animation: show 0.2s linear;
+    transform: translate(-50%,-50%) scale(1);
+    animation: show 0.2s ease-out;
 }
-.ready{
-    margin-top: 150px;
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transform: scale(1);
+@keyframes show{
+    0%{
+        transform: translate(-50%,-50%) scale(0);
+    }
+    100%{
+        transform: translate(-50%,-50%) scale(1);
+    }
 }
-.final{
-    position: fixed;
+.nums{
+    position: relative;
+    width: 250px;
+    height: 50px;
+    overflow: hidden;
+    color: #3498db;
+    font-size: 50px;
+}
+.nums span{
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    text-align: center;
+    transform: translate(-50%,-50%) rotate(120deg);
+    transform-origin: bottom center;
 }
-
+.nums span.in{
+    transform: translate(-50%,-50%) rotate(0deg);
+    animation: goIn 0.5s ease-in-out;
+}
+@keyframes goIn{
+    0%{
+        transform: translate(-50%,-50%) rotate(120deg);
+    }
+    30%{
+        transform: translate(-50%,-50%) rotate(-20deg);
+    }
+    60%{
+        transform: translate(-50%,-50%) rotate(10deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+}
+.nums span.out{
+    transform: translate(-50%,-50%) rotate(-120deg);
+    animation: goOut 0.5s ease-in-out;
+}
+@keyframes goOut{
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    60%{
+        transform: translate(-50%,-50%) rotate(20deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(-120deg);
+    }
+}
 button{
-    display: flex;
-    padding: 6px 8px;
-    width: 56px;
-    color: #fff;
-    outline: none;
+    background: #3498db;
+    border-radius: 3px;
     border: none;
-    border-radius: 4px;
-    background: skyblue;
-    transition: all 0.3s ;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition:all 0.3s;
 }
-
-.extend{
-    margin-left: 20px;
-}
-button:hover{
-    width: 90px;
-}
+#replay span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  #replay:hover span{
+    padding-right: 25px;
+  }
+  
+  #replay:hover span:after{
+    opacity: 1;
+    right: 0;
+  }

@@ -11,14 +11,37 @@
 </head>
 
 <body>
+    <!--类名（标签）选择器： 
+        1、加空格：选择当前节点的后代节点
+        2、不加空格：同一个元素当同时包含这两个类名才会有效果
+
+        加动画效果animation后：要将最后状态100%也写到该类名里
+        span.out{
+            transform: translate(-50%,-50%) rotate(-120deg);
+            animation: goOut 0.5s ease-in-out;
+        }
+        transform-origin:bottom center
+        巧妙利用 scale(0) scale(1) 进行放大缩小并消失
+
+        获取类名下的子节点：document.querySelectorAll('.nums span')
+        监听动画结束事件：animationend 
+        判断是否还有下一个节点：num.nextElementSibling
+    -->
     <div class="counter">
         <div class="nums">
             <span class="in">3</span>
             <span>2</span>
             <span>1</span>
             <span>0</span>
-
         </div>
+        <h4>get ready</h4>
+    </div>
+
+    <div class="final">
+        <div>Go</div>
+        <button id="replay">
+            <span>Replay</span>
+        </button>
     </div>
 
     <script src="script.js"></script>

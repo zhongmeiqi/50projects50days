@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35_insect-catch-game</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- 
+        Math.random()*(window.innerHeight、window.innerWIdth-200)+100+'px' 
+        transform:translateY(-100%)
+        transition:all 1s;
+    -->
+    <div id="container">
+        <div class="start">
+            <div>
+                <h1>Catch The Color</h1>
+                <button>Play Game</button>
+            </div>
+        </div>
+        <div class="choose">
+            <div>
+                <h6>What is your favorite color?</h6>
+                <div class="color-list">
+                </div>
+            </div>
+
+        </div>
+        <div class="game">
+            <div class="nav">
+                <div>Time: <span class="time">00：00</span> </div>
+                <div>Score: <span class="score">0</span></div>
+            </div>
+
+        </div>
+        <div class="success">
+            <h1>success!</h1>
+        </div>
+
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
